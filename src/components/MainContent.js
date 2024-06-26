@@ -1,5 +1,4 @@
 import React from "react";
-import "tailwindcss/tailwind.css";
 import ExpertSection from "./ExpertSection";
 import RelatedQuestions from "./RelatedQuestions";
 import Recommendation from "./Recommendation";
