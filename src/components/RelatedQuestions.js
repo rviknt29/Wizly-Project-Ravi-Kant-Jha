@@ -15,7 +15,7 @@ const questions = [
 
 const RelatedQuestions = () => {
   return (
-    <div className="w-full max-w-[764px] mx-auto md:ml-[300px] md:w-[764px]">
+    <div className="w-full max-w-[764px] mx-auto pb-28 md:ml-[300px] md:w-[764px]">
       <Typography variant="subtitle1" className="mb-2 text-gray-600">
         RELATED TOPICS/ QUESTIONS
       </Typography>
