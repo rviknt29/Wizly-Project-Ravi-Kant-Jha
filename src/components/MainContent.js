@@ -3,6 +3,7 @@ import ExpertSection from "./ExpertSection";
 import RelatedQuestions from "./RelatedQuestions";
 import Recommendation from "./Recommendation";
 import ProblemStatement from "./ProblemStatement";
+import ChatInput from "./ChatInput";
 
 const MainContent = () => {
   return (
@@ -62,6 +63,11 @@ const MainContent = () => {
       {/* Related Topics & Questions Section */}
       <div>
         <RelatedQuestions />
+      </div>
+
+      {/* Chat Input Section */}
+      <div>
+        <ChatInput />
       </div>
     </div>
   );
