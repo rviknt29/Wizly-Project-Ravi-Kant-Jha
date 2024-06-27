@@ -15,7 +15,7 @@ const questions = [
 
 const RelatedQuestions = () => {
   return (
-    <div className="w-[764px] h-[291px] ml-[300px]">
+    <div className="w-full max-w-[764px] mx-auto md:ml-[300px] md:w-[764px]">
       <Typography variant="subtitle1" className="mb-2 text-gray-600">
         RELATED TOPICS/ QUESTIONS
       </Typography>
@@ -23,17 +23,19 @@ const RelatedQuestions = () => {
         {questions.map((question, index) => (
           <ListItem
             key={index}
-            className={`py-2 rounded-[15px] px-[30px] ${
+            className={`py-2 rounded-lg px-4 md:px-[30px] ${
               index === 0 ? "bg-[#F6F7FF]" : ""
             }`}
           >
             <ListItemIcon>
-              <img src="./assets/Arrow.png" alt="arrow" />
+              <img src="./assets/Arrow.png" alt="arrow" className="w-6 h-6" />
             </ListItemIcon>
             <ListItemText
               primary={question}
-              primaryTypographyProps={{ className: "text-[#3D3D3D] text-2xl" }}
-              className="rounded-md text-2xl"
+              primaryTypographyProps={{
+                className: "text-[#3D3D3D] text-lg md:text-2xl",
+              }}
+              className="rounded-md text-lg md:text-2xl"
             />
           </ListItem>
         ))}

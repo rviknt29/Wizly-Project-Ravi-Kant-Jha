@@ -2,31 +2,34 @@ import React from "react";
 
 const ProblemStatement = () => {
   return (
-    <div className="flex pl-52">
+    <div className="flex flex-col md:flex-row items-start justify-center md:justify-between pl-4 md:pl-52">
       {/* Main Content */}
-      <div className="w-4/5 rounded-lg">
+      <div className="w-full md:w-4/5 rounded-lg mb-8 md:mb-0">
         {/* Problem Statement */}
         <div className="my-6">
-          <div className="flex items-center gap-4 mb-4 ml-[-40px]">
+          <div className="flex items-center gap-4 mb-4">
             <img
               src="./assets/WizlyShadow.png"
               alt="userIcon"
               width={40}
               height={40}
+              className="md:ml-[-40px]"
             />
-            <p className="text-2xl font-semibold">Wizly AI</p>
+            <p className="text-xl md:text-2xl font-semibold">Wizly AI</p>
           </div>
 
-          <div className="bg-[#E4F7FF] rounded-lg p-7">
+          <div className="bg-[#E4F7FF] rounded-lg p-4 md:p-7">
             <div className="flex justify-between items-center mb-2">
-              <div className="flex justify-center items-center gap-6">
+              <div className="flex items-center gap-6">
                 <img
                   src="./assets/BulbIcon.png"
                   alt="BulbIcon"
                   width={60}
                   height={60}
                 />
-                <h6 className="text-2xl font-semibold">Problem Statement</h6>
+                <h6 className="text-xl md:text-2xl font-semibold">
+                  Problem Statement
+                </h6>
               </div>
               <img
                 src="./assets/CopyIcon.png"
@@ -35,7 +38,7 @@ const ProblemStatement = () => {
                 height={36}
               />
             </div>
-            <p className="text-xl font-semibold italic">
+            <p className="text-base md:text-lg font-semibold italic">
               We have a successful organic skincare product targeted at women in
               the US and want to expand internationally. We are unsure how to
               adapt our go-to-market strategy for different countries with
@@ -46,18 +49,21 @@ const ProblemStatement = () => {
           </div>
         </div>
         {/* Answer Summary */}
-        <div className="bg-white rounded-lg my-8">
-          <div className="flex items-center gap-4 mb-4 ml-[-40px]">
+        <div className="bg-white rounded-lg mb-8 md:mb-0">
+          <div className="flex items-center gap-4 mb-4">
             <img
               src="./assets/WizlyShadow.png"
               alt="userIcon"
               width={40}
               height={40}
+              className="md:ml-[-40px]"
             />
-            <p className="text-2xl font-semibold">Wizly AI - Answer Summary</p>
+            <p className="text-xl md:text-2xl font-semibold">
+              Wizly AI - Answer Summary
+            </p>
           </div>
 
-          <p className="text-lg mb-8">
+          <p className="text-base md:text-lg mb-6">
             Expanding your US-based organic skincare product to the UK, Germany,
             and Scandinavian countries involves navigating various challenges
             and leveraging different strategies. Our verified experts suggest
@@ -65,15 +71,17 @@ const ProblemStatement = () => {
           </p>
 
           <div>
-            <p className="text-lg text-[#626B76] mb-2">Verified Sources:</p>
-            <div className="mb-4 flex gap-7 text-[#3D3D3D]">
+            <p className="text-base md:text-lg text-[#626B76] mb-2">
+              Verified Sources:
+            </p>
+            <div className="mb-4 flex flex-col md:flex-row gap-7 text-[#3D3D3D]">
               {[
                 { name: "Filip Galetic", avatar: "./assets/Filip.png" },
                 { name: "Sona Aggarwal", avatar: "./assets/Sona.png" },
                 { name: "Arvinder Gujral", avatar: "./assets/Arvinder.png" },
                 { name: "Lisa Schneider", avatar: "./assets/Lisa.png" },
               ].map((expert, index) => (
-                <div key={index} className="flex items-center mb-2">
+                <div key={index} className="flex items-center mb-2 md:mb-0">
                   <img
                     className="w-8 h-8 rounded-full mr-2"
                     alt={expert.name}
@@ -86,7 +94,7 @@ const ProblemStatement = () => {
           </div>
 
           {/* Content Sections */}
-          <div className="text-xl">
+          <div className="text-base md:text-lg">
             <h6 className="font-semibold mb-2">
               1. Regulatory and Labelling Requirements
             </h6>
@@ -162,15 +170,17 @@ const ProblemStatement = () => {
         </div>
       </div>
       {/* Vertical Line */}
-      <div className="border-l-[1px] border-[#D8D8D8] h-[600px] mt-10 mx-3"></div>
+      <div className="md:border-l-[1px] md:border-[#D8D8D8] md:h-[600px] md:mt-10 md:mx-3 border-collapse h-0"></div>
       {/* Side Panel */}
-      <div className="w-1/5 bg-white rounded-lg pt-12 mr-3">
-        <h6 className="text-lg font-semibold mb-2 text-[#626B76]">Today</h6>
+      <div className="w-full md:w-1/5 bg-white rounded-lg pt-8 pr-3">
+        <h6 className="text-base md:text-lg font-semibold mb-2 text-[#626B76]">
+          Today
+        </h6>
         <div className="mb-2 p-2 font-semibold bg-[#F5F6FF] cursor-pointer rounded">
           Global Go-to-market strategy...
         </div>
-        <hr></hr>
-        <div className="mt-1 p-2  font-semibold hover:bg-gray-100 cursor-pointer rounded">
+        <hr className="mb-2"></hr>
+        <div className="mt-1 p-2 font-semibold hover:bg-gray-100 cursor-pointer rounded">
           Effective communication for...
         </div>
       </div>

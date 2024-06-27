@@ -8,28 +8,28 @@ const MainContent = () => {
   return (
     <div className="mainBodyContainer relative top-[90px]">
       {/* Wizely default prompt & response */}
-      <div>
+      <div className="mb-8">
         <ProblemStatement />
       </div>
 
       {/* Horizontal Divider */}
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center mb-8">
         <div className="w-1/2 border-t-[1px] border-gray-300"></div>
       </div>
 
-      {/* Reccomendation Section */}
-      <div className="flex justify-center items-center">
+      {/* Recommendation Section */}
+      <div className="flex justify-center mb-8">
         <Recommendation />
       </div>
 
-      {/* Expert Setion */}
-      <div>
+      {/* Expert Section */}
+      <div className="mb-8">
         <ExpertSection />
       </div>
 
       {/* Like/Dislike & Share Section */}
-      <div>
-        <div className="py-[78px] flex justify-center items-center gap-5">
+      <div className="flex justify-center items-center mb-8">
+        <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-5">
           <div>
             <img
               src="./assets/LikeIcon.png"
@@ -38,6 +38,7 @@ const MainContent = () => {
               height={68}
             />
           </div>
+
           <div>
             <img
               src="./assets/dislikeIcon.png"
@@ -46,6 +47,7 @@ const MainContent = () => {
               height={68}
             />
           </div>
+
           <div>
             <img
               src="./assets/ShareIcon.png"

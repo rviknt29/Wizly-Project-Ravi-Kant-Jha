@@ -23,40 +23,40 @@ const Recommendation = () => {
   ];
 
   return (
-    <div className="p-4 my-[46px] w-[1100px] rounded-md">
-      <div className="mb-9 text-2xl font-semibold">
+    <div className="p-4 my-[46px] w-full max-w-[1100px] mx-auto">
+      <div className="mb-6 text-xl md:text-2xl font-semibold">
         We recommend you to go through these articles or answers provided by
         domain leaders.
       </div>
       {recommendations.map((rec) => (
         <Card
           key={rec.id}
-          className="flex flex-col gap-6 items-center sm:flex-row p-6 border-[#D8D8D8] rounded-xl"
+          className="flex flex-col gap-6 sm:flex-row p-4 md:p-6 border-[#D8D8D8] rounded-xl"
         >
-          <div className="relative">
+          <div className="relative w-full sm:w-[200px] h-[260px] sm:h-[auto]">
             <CardMedia
               component="img"
-              sx={{ width: 200, height: 260, borderRadius: 4 }}
+              sx={{ width: "100%", height: "100%", borderRadius: 4 }}
               image={rec.imgSrc}
               alt={rec.author}
-              className="relative"
+              className="object-cover"
             />
-            <div className="absolute inset-0 flex gap-8 items-end justify-center bg-opacity-50 text-white">
-              <IconButton size="large" color="inherit" className="text-white">
+            <div className="absolute inset-0 flex items-end justify-center bg-black bg-opacity-50 text-white">
+              <IconButton size="large" color="inherit">
                 <img src="./assets/PlayIcon.png" alt="PlayIcon" width={52} />
               </IconButton>
-              <IconButton size="medium" color="inherit" className="text-white h-[80px]">
-                <p className="text-2xl">{rec.videoDuration}</p>
+              <IconButton size="medium" color="inherit">
+                <p className="text-lg md:text-2xl">{rec.videoDuration}</p>
               </IconButton>
             </div>
           </div>
 
           <div className="flex flex-col flex-1">
-            <div className="text-[#0F1242] text-3xl font-bold mb-5">
+            <div className="text-[#0F1242] text-xl md:text-3xl font-bold mb-3 md:mb-5">
               {rec.title}
             </div>
 
-            <div className="text-[#626B76] mb-2">ANSWERED BY</div>
+            <div className="text-[#626B76] mb-1">ANSWERED BY</div>
 
             <div className="flex items-center mb-2">
               <Avatar
@@ -69,29 +69,19 @@ const Recommendation = () => {
               <p className="ml-3 text-[#5F5F5F]">{rec.timeAgo}</p>
             </div>
 
-            <div className="text-[#3D3D3D] text-lg font-semibold mb-2">
+            <div className="text-[#3D3D3D] text-base md:text-lg font-semibold mb-3 md:mb-2">
               {rec.description}
             </div>
 
-            <div className="flex items-center mt-2">
-              <div className="flex justify-center items-center">
-                <VisibilityIcon
-                  variant="outlined"
-                  fontSize="small"
-                  className="mr-1"
-                />
-                <p variant="body2" className="mr-4">
-                  {rec.views} Views
-                </p>
+            <div className="flex items-center">
+              <div className="flex items-center mr-4">
+                <VisibilityIcon fontSize="small" className="mr-1" />
+                <p className="text-sm md:text-base">{rec.views} Views</p>
               </div>
 
-              <div className="flex justify-center items-center">
-                <FavoriteIcon
-                  variant="outlined"
-                  fontSize="small"
-                  className="mr-1"
-                />
-                <p variant="body2">{rec.likes} Likes</p>
+              <div className="flex items-center">
+                <FavoriteIcon fontSize="small" className="mr-1" />
+                <p className="text-sm md:text-base">{rec.likes} Likes</p>
               </div>
             </div>
           </div>

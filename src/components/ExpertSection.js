@@ -27,18 +27,18 @@ const experts = [
 
 const ExpertSection = () => {
   return (
-    <div className="bg-[#E4F7FF] h-[595px] flex flex-col gap-10 justify-center items-center">
-      <div className="w-[1100px] h-[82px] text-2xl font-semibold">
+    <div className="bg-[#E4F7FF] h-[auto] md:h-[595px] flex flex-col gap-10 justify-center items-center p-6 md:p-0">
+      <div className="text-center text-lg md:text-2xl font-semibold">
         Furthermore you can now start talking or engaging with these recommended
         experts to go deeper for the solution on your problem statement.
       </div>
-      <div className="flex gap-7">
+      <div className="flex flex-col md:flex-row gap-7 mt-6 md:mt-10">
         {experts.map((expert, index) => (
           <div
             key={index}
-            className="flex flex-col justify-start items-center h-[399px] w-[388px]"
+            className="flex flex-col justify-start items-center h-[auto] md:h-[399px] w-[auto] md:w-[388px] bg-white rounded-lg shadow-lg p-4"
           >
-            <div className="relative inline-block">
+            <div className="relative inline-block mb-4">
               <Avatar
                 alt={expert.name}
                 src={expert.imgSrc}
@@ -47,20 +47,24 @@ const ExpertSection = () => {
               <img
                 src={expert.flagSrc}
                 alt="flag"
-                className="absolute top-5 right-5 w-10 h-[30px]"
+                className="absolute top-0 right-0 w-10 h-[30px]"
               />
             </div>
             <Typography
               variant="h5"
-              className="mt-4 font-semibold"
+              className="mt-2 md:mt-4 font-semibold text-center"
               color="#0F1242"
             >
               {expert.name}
             </Typography>
-            <Typography variant="subtitle1" color="#0F1242">
+            <Typography
+              variant="subtitle1"
+              className="text-center"
+              color="#0F1242"
+            >
               {expert.title}
             </Typography>
-            <Typography variant="body2" color="#7A5CFF">
+            <Typography variant="body2" className="text-center text-blue-500">
               {expert.companies}
             </Typography>
           </div>
